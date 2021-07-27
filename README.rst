@@ -1,5 +1,5 @@
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-README file for Homework, Math 471, Fall 2020,E.Perez
+README file for Scientific-Computation-and-Parallel-Computing, E.Perez
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
 This repository is shared between Elijah Perez.
