@@ -1,5 +1,5 @@
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-README file for Homework 4, Math 471, Fall 2020, N.Chang & E.Perez
+README file for Homework 4, Math 471, Fall 2020, E.Perez
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  - The homework report is found in this subdirectory, titled HW4.pdf.
  - The code files are located in the sub-directory /Codes.
