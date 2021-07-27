@@ -1,5 +1,5 @@
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-README file for Homework 6, Math 471, Fall 2020, N.Chang & E.Perez
+README file for Homework 6, Math 471, Fall 2020, E.Perez
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  - The homework report is found in the /Report directory, titled HW6.pdf.
  - The code files are located in the sub-directory /Codes
