@@ -1,5 +1,5 @@
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-README file for Homework 2, Math 471, Fall 2020, N.Chang & E.Perez
+README file for Homework 2, Math 471, Fall 2020, E.Perez
 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
  - The homework report is found in this subdirectory, titled HW2.pdf.
  - The codes are located in the subdirectory /Codes and are documented in the 
