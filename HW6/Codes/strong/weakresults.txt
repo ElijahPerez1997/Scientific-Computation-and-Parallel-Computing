@@ -1,0 +1,80 @@
+ Num of threads =            1
+ Grid size =          200
+ line 204
+ Elapsed time =    1.0359112337537226     
+ Error =    3.0264977100469928E-005
+ Num of threads =            2
+ Grid size =          283
+ line 204
+ Elapsed time =    1.8571474552445579     
+ Error =    1.5095998978651126E-005
+ Num of threads =            3
+ Grid size =          346
+ line 204
+ Elapsed time =    2.7024299184922711     
+ Error =    1.0093342443867071E-005
+ Num of threads =            4
+ Grid size =          400
+ line 204
+ Elapsed time =    3.5875504952564370     
+ Error =    7.5494846645840002E-006
+ Num of threads =            5
+ Grid size =          447
+ line 204
+ Elapsed time =    4.4821413337413105     
+ Error =    6.0439564234190544E-006
+ Num of threads =            6
+ Grid size =          490
+ line 204
+ Elapsed time =    5.2743013777508168     
+ Error =    5.0288523097223302E-006
+ Num of threads =            7
+ Grid size =          529
+ line 204
+ Elapsed time =    6.2430174257533508     
+ Error =    4.3141177051594125E-006
+ Num of threads =            8
+ Grid size =          566
+ line 204
+ Elapsed time =    7.0934617607563268     
+ Error =    3.7681058246368289E-006
+ Num of threads =            9
+ Grid size =          600
+ line 204
+ Elapsed time =    7.9322242970010848     
+ Error =    3.3528573496472237E-006
+ Num of threads =           10
+ Grid size =          632
+ line 204
+ Elapsed time =    8.8026778045023093     
+ Error =    3.0216981653040927E-006
+ Num of threads =           11
+ Grid size =          663
+ line 204
+ Elapsed time =    9.6306778209982440     
+ Error =    2.7455530140021570E-006
+ Num of threads =           12
+ Grid size =          693
+ line 204
+ Elapsed time =    10.525098646998231     
+ Error =    2.5128433071652078E-006
+ Num of threads =           13
+ Grid size =          721
+ line 204
+ Elapsed time =    11.320187709992751     
+ Error =    2.3213460315161598E-006
+ Num of threads =           14
+ Grid size =          748
+ line 204
+ Elapsed time =    12.180588522991457     
+ Error =    2.1566915836592221E-006
+ Num of threads =           15
+ Grid size =          775
+ line 204
+ Elapsed time =    13.109736206242815     
+ Error =    2.0089540285306080E-006
+ Num of threads =           16
+ Grid size =          800
+ line 204
+ Elapsed time =    14.048001781753555     
+ Error =    1.8852892469135451E-006

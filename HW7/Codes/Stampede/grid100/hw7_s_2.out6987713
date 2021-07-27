@@ -1,0 +1,6 @@
+TACC:  Starting up job 6987713 
+TACC:  Starting parallel tasks... 
+ With           2   nodes the wall clock time =   0.175227165222168       sec.
+ Processor            0 Error =    3.05069891520487     
+ Processor            1 Error =    2.19396577235913     
+TACC:  Shutdown complete. Exiting. 

@@ -1,0 +1,23 @@
+#Makefile
+
+: hw4.exe
+	./hw4.exe
+
+hw4.exe: differentiate.o trap2d.o printdble2d.o xycoord.o homework4.o 
+	gfortran trap2d.o differentiate.o printdble2d.o xycoord.o homework4.o -o hw4.exe
+
+differentiate.o: differentiate.f90
+	gfortran -c differentiate.f90
+homework4.o: homework4.f90
+	gfortran -c homework4.f90
+printdble2d.o: printdble2d.f90
+	gfortran -c printdble2d.f90
+xycoord.o: xycoord.f90
+	gfortran -c xycoord.f90
+trap2d.o: trap2d.f90
+	gfortran -c trap2d.f90
+
+clean:
+	rm -rf *.o
+	rm -rf *.mod
+	rm -f hw4.exe

@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+
+\usepackage{amssymb,amsmath,amsthm}
+\usepackage{graphicx}
+\usepackage{pgfplotstable,booktabs,longtable} % Package for including figures
+%\usepackage{psfrag,color}
+
+\title{Homework 4 \protect \\(Math/CS 471)}
+
+\author{Elijah Perez \protect \newline \\ Natalie Chang}
+
+
+\date{\vfill 11/1/2020}   
+
+
+
+\begin{document}
+	\maketitle
+	\pagebreak
+	
+	\section{Introduction}
+    This report explores the Runge–Kutta(4) method of solving ordinary differential equations through use of a real life example. We look at the behaviors of a flock of birds when influenced by a range of outside forces. We will explore the results of this experiment through a video representation modeling the solutions to the ODE system. This will simulate the flocking behavior of birds in a two dimensional space.
+	
+	\section{Equations}
+	Below is a system of ODE's representing the flock of birds:
+	\begin{center}
+	\begin{equation}
+		\vec{B(t)}^,=\begin{pmatrix}
+			\gamma_1(C(t)-B_1(t)) \\
+			\gamma_2(B_1(t)-B_2(t))\\
+			.\\
+			.\\
+			.\\
+			\gamma_2(B_1(t)-B_N(t))
+		\end{pmatrix} + F^{rep}(t)+F^{fl}(t)
+	\end{equation}
+    \end{center}
+	Where $C(t)$ is the motion of the food,	$F^{rep}(t)$ is the repelling force between birds, and $F^{fl}(t)$ is the force keeping the flock together. The first term of the vector represents the leader bird's attraction to the food. The 2 to N terms represent the rest of the flock's attraction to the leader bird. 
+	
+	
+	\section{Results}
+	There are five movies, each representing a variation of the ODE system. When experimenting with different values of N, the behaviour of the flock does not change. This is shown in the difference between angryBirds.avi and angryBirds1000.avi, which use N=40 and N=1000 respectively.The behaviour of the flock does change when the path of the food is changed. This is represented through changes in the C(t) function. \\ ConstantC.avi shows the food source in a constant position C(0,0). We see the birds move to the position and stay there. This is feasible because the leader bird is chasing the food, and the flock follows the leader bird. In real life, we would see the food get eaten immediately.\\ angryBirds.avi shows C(t) as $x(t) = 2sin(2t); y(t) = 2cos(2t)$. \\ cSin.avi shows C(t) as $x(t) = 4sin(2t); y(t) = sin(2t)$.\\ In both casses the flock of birds chase the food source. \\ The flock diameter can be defined as the difference between the maximum and minimum values of B(t) for both the x and y co-ordinates accross all birds. The flock diameter is affected by outside sources. For example, angryBirds\_smelly.avi shows a smelly factor of 20, and the diameter of the birds is approximately 40 units. When the smelly factor is decreased to 2, as seen in angryBirds.avi, the flock diameter is significantly less at approximately 10 units.
+	
+    \section{Conclusion}
+     The Runge-Kutta(4) method is seen to be successful in solving our ODE system. The movie representations accurately reflect the forces implemented in the system, which shows that our model sufficiently represents the behavior of flocking birds in a two dimensional space. This system could better represent the real world by adding more forcing terms such as a predator model. 
+
+\end{document}  

@@ -1,0 +1,11 @@
+#!/bin/bash
+#SBATCH -A TG-MTH200004
+#SBATCH -J hw7_s_8
+#SBATCH -o hw7_s_8.out%j
+#SBATCH -e hw7_s_8.err%j
+#SBATCH -p development
+#SBATCH -N 8
+#SBATCH -n 8
+#SBATCH -t 00:45:00    # Run time (hh:mm:ss)
+
+ibrun ./hw7_mpi.exe

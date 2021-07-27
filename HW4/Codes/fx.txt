@@ -1,0 +1,35 @@
+!subroutine for function 
+  subroutine fx(r,s,fout,ux,uy,jac,nr,ns,xc,yc)
+    implicit none
+    integer, INTENT(IN) :: nr, ns
+    real (kind=8), INTENT(IN) :: r,s
+    real (kind=8), INTENT(OUT) :: fout
+    real(kind=8), INTENT(IN), dimension(:,:) :: ux,uy,xc,yc,jac
+
+
+    real(kind=8) :: Eux,Euy
+
+    !Jacobian
+    
+   
+    !exact ux
+    !fuction 1
+    !Eux = 2*(((2.d0*s)**2+r**2)*sin(s+r))
+  !function 2
+    !Eux = 2*(r**2+2.d0*s)
+  !function 3
+    Eux = 2*xc(r,s)
+
+    !exact uy
+    !function 1
+    !Euy =2*((3.d0*s+r**2)*cos(r+s))
+  !function 2
+    !Euy = 2*(3.d0*r+s**2)
+  !function 3
+    Euy = 2*yc(r,s)
+
+    fout = jac(r,s)*(( ux(r,s) + uy(r,s) - (Eux+Euy) )**2)
+    !fout = jac(r,s)*(( ux(r,s) + uy(r,s) - (4) )**2)
+
+    
+  end subroutine fx

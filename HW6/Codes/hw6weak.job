@@ -1,0 +1,26 @@
+Slurm Script for an openMP program
+#!/bin/bash
+#SBATCH -J hw4weak_job           # Job name
+#SBATCH -o hw4weak_out.%j       # Name of stdout output file
+#SBATCH -e hw4weak_err.%j       # Name of stderr error file
+#SBATCH -p development          # Queue (partition) name
+#SBATCH -N 1               # Total # of nodes (must be 1 for OpenMP)
+#SBATCH -n 1               # Total # of mpi tasks (should be 1 for OpenMP)
+#SBATCH -t 00:05:00        # Run time (hh:mm:ss)
+#SBATCH --mail-user=tg871429@tacc.utexas.edu
+#SBATCH --mail-type=all    # Send email at begin and end of job
+#SBATCH -A hw4weak       # Allocation name (req'd if you have more than 1)
+
+# Other commands must follow all #SBATCH directives...
+
+module list
+pwd
+date
+
+# Set thread count (default value is 1)...
+
+export OMP_NUM_THREADS=16
+
+# Launch OpenMP code...
+
+./hw4weak.exe         # Do not use ibrun or any other MPI launcher

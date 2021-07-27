@@ -1,0 +1,74 @@
+module trapold
+  real(kind = 8), parameter :: pi = acos(-1.d0)
+  save
+  contains
+
+subroutine trapold(integral,ux,uy,jac,nr,ns,xc,yc)
+    !declare variables
+    implicit none
+    integer :: i,j
+    integer, INTENT(IN) :: nr,ns
+    real (kind=8) :: s1,s2,s3,s4,s5,hr,hs,fout,t1,t2,t3,f1,f2,f3,f4
+    real(kind=8), INTENT(OUT) :: integral
+    real(kind=8), INTENT(IN), dimension(:,:) :: ux,uy,xc,yc,jac
+
+    !nr = 60
+    !ns = 60
+    
+    hr = 2.d0/dble(nr)
+    hs = 2.d0/dble(ns)
+    s1 = 0
+    s2 = 0
+    s3 = 0
+    s4 = 0
+    s5 = 0
+    
+
+    !integrate
+    !t1 = sum over grid corners
+
+    call fx(0,0,f1,ux,uy,jac,nr,ns,xc,yc)
+    call fx(0,ns,f2,ux,uy,jac,nr,ns,xc,yc)
+    call fx(nr,0,f3,ux,uy,jac,nr,ns,xc,yc)
+    call fx(nr,ns,f4,ux,uy,jac,nr,ns,xc,yc)
+    t1 = f1 + f2 + f3 + f4
+
+    !t2 = sum over grid edges
+    do i=0,nr
+      call fx(i,0,fout,ux,uy,jac,nr,ns,xc,yc)
+      s1 = s1 + fout
+    end do
+
+    do i=0,nr
+      call fx(i,ns,fout,ux,uy,jac,nr,ns,xc,yc)
+      s2 = s2 + fout
+    end do
+
+    do j=0,ns
+      call fx(0,j,fout,ux,uy,jac,nr,ns,xc,yc)
+      s3 = s3 + fout
+    end do
+
+    do j=0,ns
+      call fx(nr,j,fout,ux,uy,jac,nr,ns,xc,yc)
+      s4 = s4 + fout
+    end do
+
+    t2 = s1 + s2 + s3 + s4
+
+    !t3 = sum over interior grid points
+    do j=0,ns
+      do i=0,nr
+        call fx(i,j,fout,ux,uy,jac,nr,ns,xc,yc)
+        s5 = s5 + fout
+      end do
+    end do
+    t3 = s5
+
+    integral = hr*hs*(0.25d0*t1 + 0.5d0*t2 + t3)  
+
+!write(*,*) 'integral = ', integral 
+ 
+end subroutine trapold
+
+end module trapold

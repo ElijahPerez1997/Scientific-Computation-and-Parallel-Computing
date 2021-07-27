@@ -1,0 +1,18 @@
+#Makefile for MPI version
+
+FC = gfortran
+OBJECTS = f2_fun.o f_mod.o laplac.o u_exact.o hw7.o
+
+: hw7.exe
+	./hw7.exe
+
+hw7.exe: $(OBJECTS)
+	$(FC) $(OBJECTS) -o hw7.exe
+
+%.o : %.f90
+	$(FC) -c $<
+
+clean:
+	rm -rf *.o
+	rm -rf *.mod
+	rm -f hw4.exe

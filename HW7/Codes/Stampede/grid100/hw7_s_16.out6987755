@@ -1,0 +1,20 @@
+TACC:  Starting up job 6987755 
+TACC:  Starting parallel tasks... 
+ With          16   nodes the wall clock time =   9.458398818969727E-002  sec.
+ Processor            0 Error =    1.75707467349526     
+ Processor            9 Error =    1.97340101369437     
+ Processor            7 Error =    1.66179377998231     
+ Processor           13 Error =    1.52048314211984     
+ Processor           11 Error =    2.55748144822887     
+ Processor           14 Error =    1.60979720466931     
+ Processor            8 Error =    1.46029006066263     
+ Processor            5 Error =    1.89055093057222     
+ Processor            4 Error =    2.04101739702713     
+ Processor           10 Error =    2.33343253518478     
+ Processor            1 Error =    1.55496193823704     
+ Processor            2 Error =    2.53147017751943     
+ Processor           12 Error =    2.26541136583739     
+ Processor            6 Error =    1.59994390045468     
+ Processor           15 Error =    1.72189190280933     
+ Processor            3 Error =    2.97097627886281     
+TACC:  Shutdown complete. Exiting. 
