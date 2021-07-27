@@ -2,7 +2,7 @@
 README file for Scientific-Computation-and-Parallel-Computing, E.Perez
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
-This repository is shared between Elijah Perez.
+This repository belongs to Elijah Perez.
 
 Each folder corresponds to a homework assignment or lab assignment and contains its own README file.
 
